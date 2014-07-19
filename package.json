@@ -1,0 +1,9 @@
+{
+  "name": "TesselRangeFinder",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "ble-ble113a": "^0.1.9",
+    "neopixels": "0.0.3"
+  }
+}
