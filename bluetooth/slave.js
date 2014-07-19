@@ -1,11 +1,13 @@
 var tessel = require('tessel');
 var blePort = tessel.port['A'];
-var bleDriver = require('ble-ble113a');
+var ble;
 
-// Connect the BLE and start advertising
-var bluetooth = bleDriver.user(blePort, function(err) {
+// Connect to BLE
+ble = require('ble-ble113a').use(blePort, function(err) {
+  // start adveristing to any listening masters
   ble.startAdvertising();
 });
+
 
 // Once connected with a master
 ble.on('connect', function(master) {
